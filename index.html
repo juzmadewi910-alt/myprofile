@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Juzma Dewi</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Ikon -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-cat"></i>
+            <span>Juzma Dewi</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle"
+                aria-label="Ganti tema">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Bagian utama -->
+    <main>
+        <section class="hero" id="home">
+
+            <!-- Teks profil -->
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+
+                <h1>Juzma Dewi
+                    <span class="heart">♡</span>
+                </h1>
+
+                <h2>Mahasiswa Teknik Informatika</h2>
+
+                <div class="npm">NPM 248160039</div>
+
+                <p class="description" id="about">
+                    Halo! Saya Juzma Dewi, seorang mahasiswa Teknik
+                    Informatika yang sangat antusias dengan dunia
+                    rekayasa perangkat lunak, algoritma, dan inovasi
+                    digital. Saya memiliki minat khusus dalam
+                    pengembangan web, sistem terdistribusi, dan
+                    keamanan siber. Di luar coding, saya juga aktif
+                    di organisasi kampus dan terus belajar hal baru.
+                    Selamat datang di portofolio saya!
+                </p>
+
+                <!-- Tombol -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Lihat Proyek
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-regular fa-envelope"></i>
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Media sosial -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/"
+                       target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://github.com/"
+                       target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="mailto:emailkamu@example.com"
+                       aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Foto profil -->
+            <div class="hero-image">
+                <span class="crown">♕</span>
+
+                <div class="photo-frame">
+                    <img src="juzma.jpeg" alt="Foto Juzma Dewi">
+                </div>
+
+                <span class="decoration heart-one">♡</span>
+                <span class="decoration heart-two">♡</span>
+                <span class="keep-going">Keep<br>Going<br>&lt;3</span>
+                <span class="flower">❀</span>
+            </div>
+
+        </section>
+
+        <!-- Bagian tambahan untuk navigasi -->
+        <section class="extra-section" id="skills">
+            <h2>My Skills</h2>
+            <p>HTML, CSS, Java, dan pengembangan web.</p>
+        </section>
+
+        <section class="extra-section" id="projects">
+            <h2>My Projects</h2>
+            <p>Tempat menampilkan proyek yang pernah kamu buat.</p>
+        </section>
+
+        <section class="extra-section" id="education">
+            <h2>Education</h2>
+            <p>Mahasiswa Teknik Informatika.</p>
+        </section>
+
+        <section class="extra-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: emailkamu@example.com</p>
+        </section>
+    </main>
+
+    <!-- JavaScript untuk tombol tema -->
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+
+        themeToggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            const icon = themeToggle.querySelector("i");
+
+            if (document.body.classList.contains("dark-mode")) {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        });
+    </script>
+
+</body>
+</html>
